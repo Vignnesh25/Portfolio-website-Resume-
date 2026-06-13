@@ -1,63 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vignnesh | AI & Data Science Student Portfolio</title>
-  <meta name="description" content="Portfolio of Vignnesh, a 19-year-old AI & Data Science Engineering student. Projects, skills, education and contact." />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vignnesh Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="#home" class="logo">Vignnesh<span>.</span></a>
-
+<header>
     <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+        <h2 class="logo">Vignnesh</h2>
 
-    <button id="themeToggle" class="icon-btn">🌙</button>
-    <button id="menuToggle" class="icon-btn menu-btn">☰</button>
-  </div>
+        <ul id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="themeToggle">🌙</button>
+    </nav>
 </header>
 
+<!-- HOME -->
 <section id="home" class="hero">
-  <div class="container hero-inner">
-    <p class="eyebrow">Welcome to my portfolio</p>
+    <h1>Hi, I'm Vignnesh</h1>
+    <h2 id="typed"></h2>
 
-    <h1>
-      Hi, I'm
-      <span class="gradient">Vignnesh</span>
-    </h1>
-
-    <h2 class="typing">
-      <span id="typed"></span>
-      <span class="cursor">|</span>
-    </h2>
-
-    <p class="lead">
-      A passionate AI & Data Science Engineering student building intelligent solutions.
+    <p>
+        Artificial Intelligence & Data Science Student
     </p>
 
-    <div class="cta">
-      <a href="#projects" class="btn btn-primary">View My Work</a>
-      <a href="resume.pdf" class="btn btn-outline" download>
-        Download Resume
-      </a>
-    </div>
-  </div>
+    <a href="#about" class="btn">Explore More</a>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am an Artificial Intelligence and Data Science student passionate
+        about Machine Learning, Deep Learning, Data Analytics and Web
+        Development.
+    </p>
+
+    <p>
+        I enjoy building innovative projects and learning new technologies.
+    </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>B.E Artificial Intelligence & Data Science</h3>
+        <p>2023 - Present</p>
+    </div>
+
+    <div class="card">
+        <h3>PUC</h3>
+        <p>Completed with distinction</p>
+    </div>
+
+    <div class="card">
+        <h3>SSLC</h3>
+        <p>Strong academic performance</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="bar"><span style="width:90%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>C Programming</p>
+        <div class="bar"><span style="width:85%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>Machine Learning</p>
+        <div class="bar"><span style="width:80%"></span></div>
+    </div>
+
+    <div class="skill">
+        <p>HTML CSS JavaScript</p>
+        <div class="bar"><span style="width:90%"></span></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>CrashSense</h3>
+        <p>
+            AI powered accident detection system with emergency alerting.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Smart Garage</h3>
+        <p>
+            RFID based smart parking access system.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Data Visualizer</h3>
+        <p>
+            Interactive dashboard for CSV analytics.
+        </p>
+    </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+    <h2>Resume</h2>
+
+    <p>
+        Download my latest resume below.
+    </p>
+
+    <a href="resume.pdf" download class="btn">
+        Download Resume
+    </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+        <textarea
+            placeholder="Message"
+            rows="5"
+            required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="status"></p>
+</section>
+
+<footer>
+    <p>© 2026 Vignnesh Portfolio</p>
+</footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
