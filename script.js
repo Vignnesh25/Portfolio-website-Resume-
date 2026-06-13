@@ -1,40 +1,39 @@
 const words = [
-  "AI Engineer",
-  "Data Scientist",
-  "Web Developer",
-  "Machine Learning Enthusiast"
+"AI Engineer",
+"Data Scientist",
+"ML Enthusiast",
+"Web Developer"
 ];
 
 let i = 0;
 let j = 0;
-let currentWord = "";
-let isDeleting = false;
+let deleting = false;
 
-function type() {
+function type(){
 
-    currentWord = words[i];
+let current = words[i];
 
-    if(isDeleting){
-        document.getElementById("typed").textContent =
-        currentWord.substring(0,j--);
-    }
-    else{
-        document.getElementById("typed").textContent =
-        currentWord.substring(0,j++);
-    }
+if(deleting){
+document.getElementById("typed").textContent =
+current.substring(0,j--);
+}
+else{
+document.getElementById("typed").textContent =
+current.substring(0,j++);
+}
 
-    if(!isDeleting && j === currentWord.length){
-        isDeleting = true;
-        setTimeout(type,1000);
-        return;
-    }
+if(!deleting && j === current.length){
+deleting = true;
+setTimeout(type,1200);
+return;
+}
 
-    if(isDeleting && j === 0){
-        isDeleting = false;
-        i = (i + 1) % words.length;
-    }
+if(deleting && j === 0){
+deleting = false;
+i = (i + 1) % words.length;
+}
 
-    setTimeout(type,isDeleting ? 50 : 100);
+setTimeout(type,deleting ? 50 : 100);
 }
 
 type();
@@ -42,24 +41,26 @@ type();
 document.getElementById("themeToggle")
 .addEventListener("click",function(){
 
-    if(document.body.classList.contains("dark")){
-        document.body.classList.remove("dark");
-        this.innerHTML="🌙";
-    }
-    else{
-        document.body.classList.add("dark");
-        this.innerHTML="☀️";
-    }
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+this.innerHTML="☀️";
+}
+else{
+this.innerHTML="🌙";
+}
 
 });
 
 document.getElementById("contactForm")
 .addEventListener("submit",function(e){
 
-    e.preventDefault();
+e.preventDefault();
 
-    document.getElementById("status").innerHTML =
-    "Message sent successfully!";
+document.getElementById("status")
+.innerHTML =
+"✅ Message Sent Successfully!";
 
-    this.reset();
+this.reset();
+
 });
