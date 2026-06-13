@@ -1,374 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vignnesh – AI & Data Science Engineering Student. Portfolio showcasing projects, skills, and experience in Machine Learning, IoT, and Software Development." />
-  <meta name="keywords" content="Vignnesh, AI, Data Science, Machine Learning, Portfolio, Engineer, Python" />
-  <meta name="author" content="Vignnesh" />
-  <title>Vignnesh | AI & Data Science Engineer</title>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Vignnesh | AI & Data Science Student Portfolio</title>
+  <meta name="description" content="Portfolio of Vignnesh, a 19-year-old AI & Data Science Engineering student. Projects, skills, education and contact." />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-brand">
-      <span class="brand-v">V</span><span class="brand-rest">ignnesh</span>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Vignnesh<span>.</span></a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button id="themeToggle" class="icon-btn">🌙</button>
+    <button id="menuToggle" class="icon-btn menu-btn">☰</button>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Welcome to my portfolio</p>
+
+    <h1>
+      Hi, I'm
+      <span class="gradient">Vignnesh</span>
+    </h1>
+
+    <h2 class="typing">
+      <span id="typed"></span>
+      <span class="cursor">|</span>
+    </h2>
+
+    <p class="lead">
+      A passionate AI & Data Science Engineering student building intelligent solutions.
+    </p>
+
+    <div class="cta">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="resume.pdf" class="btn btn-outline" download>
+        Download Resume
+      </a>
     </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#certifications" class="nav-link">Certifications</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-sun" id="themeIcon"></i>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <p class="hero-eyebrow"><span class="dot"></span> Available for opportunities</p>
-        <h1 class="hero-name">Vignnesh</h1>
-        <div class="hero-typing-wrap">
-          <span class="typing-cursor-text" id="typingText"></span><span class="cursor">|</span>
-        </div>
-        <p class="hero-bio">
-          19-year-old engineer-in-training passionate about building intelligent systems
-          that solve real problems — from crash detection to smart infrastructure.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#" class="btn btn-outline" onclick="downloadResume(event)">
- 
-            <i class="fas fa-download"></i> Resume
-          </a>
-        </div>
-        <div class="hero-socials">
-          <a href="mailto:vignnesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/vignnesh" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/vignnesh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-      <div class="hero-image-wrap">
-        <div class="profile-ring">
-          <img src="profile.jpg" alt="Vignnesh – AI & DS Student" class="profile-img"
-            onerror="this.src='https://ui-avatars.com/api/?name=Vignnesh&background=6c63ff&color=fff&size=300&font-size=0.4&bold=true'" />
-        </div>
-        <div class="floating-badge badge-ml"><i class="fas fa-brain"></i> ML</div>
-        <div class="floating-badge badge-iot"><i class="fas fa-microchip"></i> IoT</div>
-        <div class="floating-badge badge-ds"><i class="fas fa-chart-line"></i> DS</div>
-      </div>
-    </div>
-    <a href="#about" class="scroll-down-arrow" aria-label="Scroll down">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title" data-label="01 / About">Who I Am</h2>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>I'm <strong>Vignnesh</strong>, a 19-year-old Artificial Intelligence &amp; Data Science
-          Engineering student with a deep curiosity for how intelligent systems can reshape the world around us.</p>
-          <p>My journey started with a simple question: <em>what if machines could learn to think?</em>
-          That question led me to explore Machine Learning, IoT, and full-stack development —
-          building projects that go from sensor hardware all the way to data dashboards.</p>
-          <p>When I'm not training models or debugging circuits, I'm exploring new tech stacks,
-          contributing to open source, and preparing to become a Future Software Engineer who
-          bridges the gap between data science and production-ready software.</p>
-          <div class="about-stats">
-            <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Projects Built</span></div>
-            <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Certifications</span></div>
-            <div class="stat"><span class="stat-num" data-target="7">0</span><span class="stat-label">Technologies</span></div>
-          </div>
-        </div>
-        <div class="about-cards reveal">
-          <div class="info-card"><i class="fas fa-user-graduate"></i><div><h4>Age</h4><p>19 years old</p></div></div>
-          <div class="info-card"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>India</p></div></div>
-          <div class="info-card"><i class="fas fa-graduation-cap"></i><div><h4>Degree</h4><p>B.E. in AI &amp; Data Science</p></div></div>
-          <div class="info-card"><i class="fas fa-code"></i><div><h4>Focus</h4><p>ML · IoT · Web Dev</p></div></div>
-          <div class="info-card"><i class="fas fa-language"></i><div><h4>Languages</h4><p>English, Tamil</p></div></div>
-          <div class="info-card"><i class="fas fa-heart"></i><div><h4>Interests</h4><p>AI Research · Open Source</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION SECTION -->
-  <section class="section section-alt" id="education">
-    <div class="container">
-      <h2 class="section-title" data-label="02 / Education">Academic Journey</h2>
-      <div class="timeline reveal">
-        <div class="timeline-item">
-          <div class="timeline-marker"><i class="fas fa-university"></i></div>
-          <div class="timeline-body">
-            <span class="timeline-year">2023 – 2027 (Expected)</span>
-            <h3>Bachelor of Engineering — AI &amp; Data Science</h3>
-            <p class="timeline-institution">College of Engineering, India</p>
-            <p>Pursuing a comprehensive curriculum in artificial intelligence, machine learning, data science, IoT systems, and software engineering.</p>
-            <div class="timeline-tags">
-              <span>Machine Learning</span><span>Deep Learning</span>
-              <span>Data Structures</span><span>IoT Systems</span><span>Python Programming</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"><i class="fas fa-school"></i></div>
-          <div class="timeline-body">
-            <span class="timeline-year">Completed 2023</span>
-            <h3>Higher Secondary Certificate (12th Grade)</h3>
-            <p class="timeline-institution">State Board, India</p>
-            <p>Completed with distinction in Computer Science, Physics, Chemistry, and Mathematics.</p>
-            <div class="timeline-tags">
-              <span>Computer Science</span><span>Mathematics</span><span>Physics</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section class="section" id="skills">
-    <div class="container">
-      <h2 class="section-title" data-label="03 / Skills">Technical Arsenal</h2>
-      <div class="skills-grid">
-
-        <div class="skill-category reveal">
-          <h3><i class="fas fa-code"></i> Programming Languages</h3>
-          <div class="skill-pills">
-            <span class="skill-pill pill-primary"><i class="fab fa-python"></i> Python</span>
-            <span class="skill-pill pill-primary"><i class="fas fa-copyright"></i> C</span>
-            <span class="skill-pill pill-primary"><i class="fab fa-java"></i> Java</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>Python</span><div class="bar-track"><div class="bar-fill" data-pct="88"></div></div><span class="pct-label">88%</span></div>
-            <div class="skill-bar-item"><span>C</span><div class="bar-track"><div class="bar-fill" data-pct="75"></div></div><span class="pct-label">75%</span></div>
-            <div class="skill-bar-item"><span>Java</span><div class="bar-track"><div class="bar-fill" data-pct="70"></div></div><span class="pct-label">70%</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3><i class="fas fa-brain"></i> AI / ML</h3>
-          <div class="skill-pills">
-            <span class="skill-pill pill-accent"><i class="fas fa-robot"></i> Machine Learning</span>
-            <span class="skill-pill pill-accent"><i class="fas fa-chart-scatter"></i> Data Science</span>
-            <span class="skill-pill pill-accent"><i class="fas fa-network-wired"></i> Neural Networks</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>Machine Learning</span><div class="bar-track"><div class="bar-fill" data-pct="82"></div></div><span class="pct-label">82%</span></div>
-            <div class="skill-bar-item"><span>Data Science</span><div class="bar-track"><div class="bar-fill" data-pct="78"></div></div><span class="pct-label">78%</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3><i class="fas fa-microchip"></i> IoT &amp; Hardware</h3>
-          <div class="skill-pills">
-            <span class="skill-pill pill-green"><i class="fas fa-satellite-dish"></i> IoT</span>
-            <span class="skill-pill pill-green"><i class="fas fa-id-card"></i> RFID</span>
-            <span class="skill-pill pill-green"><i class="fas fa-plug"></i> Embedded Systems</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>IoT Systems</span><div class="bar-track"><div class="bar-fill" data-pct="80"></div></div><span class="pct-label">80%</span></div>
-            <div class="skill-bar-item"><span>RFID Technology</span><div class="bar-track"><div class="bar-fill" data-pct="74"></div></div><span class="pct-label">74%</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3><i class="fas fa-globe"></i> Web Development</h3>
-          <div class="skill-pills">
-            <span class="skill-pill pill-orange"><i class="fab fa-html5"></i> HTML5</span>
-            <span class="skill-pill pill-orange"><i class="fab fa-css3-alt"></i> CSS3</span>
-            <span class="skill-pill pill-orange"><i class="fab fa-js"></i> JavaScript</span>
-          </div>
-          <div class="skill-bars">
-            <div class="skill-bar-item"><span>HTML / CSS</span><div class="bar-track"><div class="bar-fill" data-pct="85"></div></div><span class="pct-label">85%</span></div>
-            <div class="skill-bar-item"><span>JavaScript</span><div class="bar-track"><div class="bar-fill" data-pct="72"></div></div><span class="pct-label">72%</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <h2 class="section-title" data-label="04 / Projects">Things I've Built</h2>
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-car-crash"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/vignnesh/crashsense" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank" aria-label="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <h3>CrashSense</h3>
-          <p>An intelligent accident-detection system using IoT sensors and ML to identify vehicle crashes in real time and automatically alert emergency services with location data.</p>
-          <div class="project-stack">
-            <span>Python</span><span>IoT</span><span>Machine Learning</span><span>Sensor Fusion</span>
-          </div>
-          <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> Real-time crash detection</span>
-            <span><i class="fas fa-check-circle"></i> Automated emergency alerts</span>
-            <span><i class="fas fa-check-circle"></i> GPS location tracking</span>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-warehouse"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/vignnesh/smart-garage-rfid" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank" aria-label="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <h3>Smart Garage with RFID</h3>
-          <p>A fully automated garage access control system built using RFID technology and embedded hardware. Registered cards unlock the gate while the system logs all entries and denies unrecognized tags.</p>
-          <div class="project-stack">
-            <span>RFID</span><span>IoT</span><span>Embedded C</span><span>Arduino</span>
-          </div>
-          <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> RFID-based authentication</span>
-            <span><i class="fas fa-check-circle"></i> Entry/exit logging</span>
-            <span><i class="fas fa-check-circle"></i> Intruder alert system</span>
-          </div>
-        </div>
-
-        <div class="project-card project-card-wip reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-flask"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/vignnesh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>Project In Progress <span class="wip-badge">Coming Soon</span></h3>
-          <p>A new AI-powered project currently in active development. Follow my GitHub to stay updated — it involves data pipelines and predictive modelling.</p>
-          <div class="project-stack">
-            <span>Python</span><span>Data Science</span><span>ML</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS SECTION -->
-  <section class="section" id="certifications">
-    <div class="container">
-      <h2 class="section-title" data-label="05 / Certifications">Credentials</h2>
-      <div class="certs-grid">
-        <div class="cert-card reveal"><div class="cert-logo"><i class="fas fa-award"></i></div><div class="cert-info"><h4>Python for Data Science</h4><p>NPTEL / Coursera</p><span class="cert-year">2024</span></div></div>
-        <div class="cert-card reveal"><div class="cert-logo"><i class="fas fa-certificate"></i></div><div class="cert-info"><h4>Machine Learning Fundamentals</h4><p>Google / Coursera</p><span class="cert-year">2024</span></div></div>
-        <div class="cert-card reveal"><div class="cert-logo"><i class="fas fa-medal"></i></div><div class="cert-info"><h4>IoT Fundamentals</h4><p>Cisco Networking Academy</p><span class="cert-year">2024</span></div></div>
-        <div class="cert-card reveal"><div class="cert-logo"><i class="fas fa-trophy"></i></div><div class="cert-info"><h4>Web Development Bootcamp</h4><p>Udemy / freeCodeCamp</p><span class="cert-year">2023</span></div></div>
-        <div class="cert-card reveal"><div class="cert-logo"><i class="fas fa-star"></i></div><div class="cert-info"><h4>Data Structures &amp; Algorithms</h4><p>NPTEL</p><span class="cert-year">2023</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="section section-alt" id="contact">
-    <div class="container">
-      <h2 class="section-title" data-label="06 / Contact">Get In Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-intro reveal">
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of something meaningful. Whether you have a question or just want to say hi — my inbox is open.</p>
-          <div class="contact-links">
-            <a href="mailto:vignnesh@example.com" class="contact-link">
-              <i class="fas fa-envelope"></i>
-              <div><span class="contact-link-label">Email</span><span class="contact-link-value">vignnesh@example.com</span></div>
-            </a>
-            <a href="https://linkedin.com/in/vignnesh" target="_blank" class="contact-link">
-              <i class="fab fa-linkedin-in"></i>
-              <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">linkedin.com/in/vignnesh</span></div>
-            </a>
-            <a href="https://github.com/vignnesh" target="_blank" class="contact-link">
-              <i class="fab fa-github"></i>
-              <div><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/vignnesh</span></div>
-            </a>
-          </div>
-        </div>
-        <div class="contact-form-wrap reveal">
-          <div class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">Your Name</label>
-                <input type="text" id="fname" placeholder="John Doe" />
-              </div>
-              <div class="form-group">
-                <label for="femail">Your Email</label>
-                <input type="email" id="femail" placeholder="john@example.com" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="fsubject">Subject</label>
-              <input type="text" id="fsubject" placeholder="Project collaboration..." />
-            </div>
-            <div class="form-group">
-              <label for="fmessage">Message</label>
-              <textarea id="fmessage" rows="5" placeholder="Tell me about your idea..."></textarea>
-            </div>
-            <button class="btn btn-primary btn-full" onclick="handleFormSubmit(event)">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-            <p class="form-note" id="formNote"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand nav-brand">
-        <span class="brand-v">V</span><span class="brand-rest">ignnesh</span>
-      </div>
-      <p class="footer-tagline">AI & Data Science Engineer in the making.</p>
-      <div class="footer-socials">
-        <a href="mailto:vignnesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/vignnesh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/vignnesh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/vignnesh" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-      </div>
-      <p class="footer-copy">
-        &copy; <span id="year"></span> Vignnesh. Built with
-        <i class="fas fa-heart" style="color:var(--accent-primary)"></i> and lots of Python.
-      </p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
