@@ -1,78 +1,65 @@
-const phrases = [
-  "AI & Data Science Student",
-  "Future Software Engineer",
-  "Tech Enthusiast"
+const words = [
+  "AI Engineer",
+  "Data Scientist",
+  "Web Developer",
+  "Machine Learning Enthusiast"
 ];
 
-const typedEl = document.getElementById("typed");
-
-let pIdx = 0;
-let cIdx = 0;
-let deleting = false;
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
 
 function type() {
-  const current = phrases[pIdx];
 
-  if (deleting) {
-    cIdx--;
-    typedEl.textContent = current.substring(0, cIdx);
+    currentWord = words[i];
 
-    if (cIdx === 0) {
-      deleting = false;
-      pIdx = (pIdx + 1) % phrases.length;
-      setTimeout(type, 400);
-      return;
+    if(isDeleting){
+        document.getElementById("typed").textContent =
+        currentWord.substring(0,j--);
+    }
+    else{
+        document.getElementById("typed").textContent =
+        currentWord.substring(0,j++);
     }
 
-    setTimeout(type, 40);
-
-  } else {
-
-    cIdx++;
-    typedEl.textContent = current.substring(0, cIdx);
-
-    if (cIdx === current.length) {
-      deleting = true;
-      setTimeout(type, 1500);
-      return;
+    if(!isDeleting && j === currentWord.length){
+        isDeleting = true;
+        setTimeout(type,1000);
+        return;
     }
 
-    setTimeout(type, 80);
-  }
+    if(isDeleting && j === 0){
+        isDeleting = false;
+        i = (i + 1) % words.length;
+    }
+
+    setTimeout(type,isDeleting ? 50 : 100);
 }
 
 type();
 
-const themeBtn = document.getElementById("themeToggle");
+document.getElementById("themeToggle")
+.addEventListener("click",function(){
 
-const savedTheme =
-  localStorage.getItem("theme") || "light";
+    if(document.body.classList.contains("dark")){
+        document.body.classList.remove("dark");
+        this.innerHTML="🌙";
+    }
+    else{
+        document.body.classList.add("dark");
+        this.innerHTML="☀️";
+    }
 
-document.documentElement.setAttribute(
-  "data-theme",
-  savedTheme
-);
-
-themeBtn.textContent =
-  savedTheme === "dark" ? "☀️" : "🌙";
-
-themeBtn.addEventListener("click", () => {
-
-  const next =
-    document.documentElement.getAttribute("data-theme") === "dark"
-      ? "light"
-      : "dark";
-
-  document.documentElement.setAttribute(
-    "data-theme",
-    next
-  );
-
-  localStorage.setItem("theme", next);
-
-  themeBtn.textContent =
-    next === "dark" ? "☀️" : "🌙";
 });
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    document.getElementById("status").innerHTML =
+    "Message sent successfully!";
+
+    this.reset();
+});
