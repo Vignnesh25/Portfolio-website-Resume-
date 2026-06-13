@@ -215,3 +215,257 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+/* ============================================================
+   13. RESUME DOWNLOAD GENERATOR
+   Generates a professional resume PDF using browser print
+   ============================================================ */
+
+function downloadResume(e) {
+  e.preventDefault();
+
+  // Create a hidden iframe with resume content
+  const resumeHTML = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8"/>
+      <title>Vignnesh - Resume</title>
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+          font-family: 'Segoe UI', Arial, sans-serif;
+          font-size: 13px;
+          color: #1a1a2e;
+          background: #fff;
+          padding: 0;
+        }
+
+        /* ---- Header ---- */
+        .header {
+          background: linear-gradient(135deg, #7c6af7, #06d6a0);
+          color: #fff;
+          padding: 32px 40px 28px;
+        }
+        .header h1 {
+          font-size: 32px;
+          font-weight: 800;
+          letter-spacing: -1px;
+          margin-bottom: 4px;
+        }
+        .header .role {
+          font-size: 14px;
+          opacity: 0.92;
+          font-weight: 500;
+          margin-bottom: 14px;
+          letter-spacing: 0.3px;
+        }
+        .contact-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px 20px;
+          font-size: 12px;
+          opacity: 0.93;
+        }
+        .contact-row span { display: flex; align-items: center; gap: 5px; }
+
+        /* ---- Body Layout ---- */
+        .body {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          min-height: calc(100vh - 130px);
+        }
+
+        /* ---- Sidebar ---- */
+        .sidebar {
+          background: #f4f5ff;
+          padding: 28px 24px;
+          border-right: 2px solid #e0e1f5;
+        }
+
+        /* ---- Main ---- */
+        .main {
+          padding: 28px 36px;
+          background: #fff;
+        }
+
+        /* ---- Section Titles ---- */
+        .section-title {
+          font-size: 11px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          color: #7c6af7;
+          border-bottom: 2px solid #7c6af7;
+          padding-bottom: 4px;
+          margin-bottom: 14px;
+          margin-top: 22px;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        /* ---- Skills ---- */
+        .skill-group { margin-bottom: 12px; }
+        .skill-group h4 {
+          font-size: 11px; font-weight: 700;
+          color: #4a4b6e; margin-bottom: 6px;
+          text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+        .skill-tag {
+          background: #7c6af7;
+          color: #fff;
+          font-size: 10px; font-weight: 600;
+          padding: 3px 9px; border-radius: 100px;
+        }
+        .skill-tag.green  { background: #06d6a0; }
+        .skill-tag.orange { background: #ff8c42; }
+
+        /* ---- Info items ---- */
+        .info-item { margin-bottom: 10px; }
+        .info-item .label {
+          font-size: 10px; font-weight: 700;
+          text-transform: uppercase; letter-spacing: 0.5px;
+          color: #8889a8; margin-bottom: 2px;
+        }
+        .info-item .value { font-size: 12px; font-weight: 600; color: #14152b; }
+
+        /* ---- Certifications ---- */
+        .cert-item { margin-bottom: 10px; padding-left: 10px; border-left: 2px solid #7c6af7; }
+        .cert-item h4 { font-size: 12px; font-weight: 700; color: #14152b; }
+        .cert-item p  { font-size: 11px; color: #8889a8; }
+        .cert-item span { font-size: 10px; color: #06d6a0; font-weight: 600; }
+
+        /* ---- Experience/Project entries ---- */
+        .entry { margin-bottom: 20px; }
+        .entry-header {
+          display: flex; justify-content: space-between;
+          align-items: flex-start; margin-bottom: 4px;
+        }
+        .entry h3 { font-size: 14px; font-weight: 700; color: #14152b; }
+        .entry .meta {
+          font-size: 11px; color: #7c6af7;
+          font-weight: 600; white-space: nowrap;
+        }
+        .entry .sub {
+          font-size: 12px; color: #4a4b6e;
+          font-weight: 500; margin-bottom: 6px;
+        }
+        .entry ul { padding-left: 16px; }
+        .entry ul li {
+          font-size: 12px; color: #4a4b6e;
+          margin-bottom: 3px; line-height: 1.5;
+        }
+        .entry ul li::marker { color: #7c6af7; }
+        .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+        .tag {
+          background: rgba(124,106,247,0.1);
+          color: #7c6af7; font-size: 10px;
+          font-weight: 600; padding: 2px 8px;
+          border-radius: 100px;
+        }
+
+        /* ---- Objective ---- */
+        .objective {
+          background: linear-gradient(135deg, rgba(124,106,247,0.08), rgba(6,214,160,0.05));
+          border-left: 3px solid #7c6af7;
+          padding: 12px 16px; border-radius: 0 8px 8px 0;
+          font-size: 12.5px; color: #4a4b6e; line-height: 1.7;
+          margin-bottom: 20px;
+        }
+
+        @media print {
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+      </style>
+    </head>
+    <body>
+
+      <!-- HEADER -->
+      <div class="header">
+        <h1>Vignnesh</h1>
+        <div class="role">AI & Data Science Engineering Student | Age: 19</div>
+        <div class="contact-row">
+          <span>📧 vignnesh@example.com</span>
+          <span>🔗 linkedin.com/in/vignnesh</span>
+          <span>💻 github.com/vignnesh</span>
+          <span>📍 India</span>
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="body">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+          <!-- Personal Info -->
+          <div class="section-title">Personal Info</div>
+          <div class="info-item">
+            <div class="label">Age</div>
+            <div class="value">19 Years Old</div>
+          </div>
+          <div class="info-item">
+            <div class="label">Degree</div>
+            <div class="value">B.E. — AI & Data Science</div>
+          </div>
+          <div class="info-item">
+            <div class="label">Year</div>
+            <div class="value">2nd Year (2023–2027)</div>
+          </div>
+          <div class="info-item">
+            <div class="label">Languages</div>
+            <div class="value">English, Tamil</div>
+          </div>
+          <div class="info-item">
+            <div class="label">Available For</div>
+            <div class="value">Internships & Projects</div>
+          </div>
+
+          <!-- Skills -->
+          <div class="section-title">Programming</div>
+          <div class="skill-group">
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="section-title">AI / ML</div>
+          <div class="skill-group">
+            <div class="skill-tags">
+              <span class="skill-tag green">Machine Learning</span>
+              <span class="skill-tag green">Data Science</span>
+              <span class="skill-tag green">Neural Networks</span>
+              <span class="skill-tag green">NumPy</span>
+              <span class="skill-tag green">Pandas</span>
+              <span class="skill-tag green">Scikit-learn</span>
+            </div>
+          </div>
+
+          <div class="section-title">IoT & Tools</div>
+          <div class="skill-group">
+            <div class="skill-tags">
+              <span class="skill-tag orange">IoT</span>
+              <span class="skill-tag orange">RFID</span>
+              <span class="skill-tag orange">Arduino</span>
+              <span class="skill-tag orange">Embedded C</span>
+              <span class="skill-tag orange">Git</span>
+              <span class="skill-tag orange">VS Code</span>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="section-title">Certifications</div>
+
+          <div class="cert-item">
+            <h4>Python for Data Science</h4>
+            <p>NPTEL / Coursera</p>
+            <span>2024</span>
+          </div>
+          <div class="cert-item">
+            <h4>Machine Learning Fundamentals</h4>
+            <p>Google / Coursera</p>
