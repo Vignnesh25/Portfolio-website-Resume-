@@ -1,509 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vignnesh | AI & Data Science Portfolio</title>
-
-    <meta name="description"
-        content="Vignnesh - AI & Data Science Engineering Student Portfolio">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/your-kit.js"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vignnesh — AI & Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Vignnesh, B.E. Artificial Intelligence & Data Science student. Projects in ML, IoT, and Web Development." />
+  <meta name="theme-color" content="#3b72ff" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
+  <!-- THEME TOGGLE -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="theme-icon sun">☀️</span>
+    <span class="theme-icon moon">🌙</span>
+  </button>
 
-    <header class="navbar">
+  <!-- NAVIGATION -->
+  <header class="nav-bar">
+    <nav class="container nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Vignnesh</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#resume" class="nav-resume">Resume</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
-        <div class="logo">
-            Vignnesh
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Available for internships
+      </div>
+      <h1 class="hero-title">Hi, I'm <span class="text-gradient">Vignnesh</span></h1>
+      <div class="typing-wrap">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        19-year-old Engineering student passionate about Artificial Intelligence,
+        Data Science, and IoT. I turn ideas into intelligent systems that solve real problems.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">🚀 View My Work</a>
+        <button class="btn btn-outline" data-modal="resume">📄 Download Resume</button>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">🐙</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">💼</a>
+        <a href="mailto:vignnesh@example.com" aria-label="Email">✉️</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">↓</a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-eyebrow">About Me</p>
+      <h2 class="section-title">Curious mind, builder at heart</h2>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>
+            I'm <strong>Vignnesh</strong>, a 19-year-old Engineering student pursuing my B.E. in
+            Artificial Intelligence &amp; Data Science. I enjoy exploring the intersection of
+            intelligent algorithms and real-world hardware — from training ML models to wiring
+            up sensors and microcontrollers.
+          </p>
+          <p>
+            Beyond coursework, I build hands-on projects, participate in hackathons, and
+            constantly learn new tools across the AI, IoT and web development stacks. My goal
+            is to grow into a versatile software engineer who ships meaningful products.
+          </p>
         </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-value text-gradient" data-count="19" data-suffix="">19</div>
+            <div class="stat-label">Age</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-gradient">AI &amp; DS</div>
+            <div class="stat-label">Focus</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-gradient" data-count="5" data-suffix="+">5+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value text-gradient">Open</div>
+            <div class="stat-label">To Work</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="section">
+    <div class="container">
+      <p class="section-eyebrow">Education</p>
+      <h2 class="section-title">Academic journey</h2>
+      <div class="education-list">
+        <div class="edu-card reveal" data-delay="0">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>B.E. — Artificial Intelligence &amp; Data Science</h3>
+            <p class="edu-meta">Engineering College · <span class="accent-text">2023 — 2027 (ongoing)</span></p>
+            <p class="edu-note">Core subjects: Machine Learning, Deep Learning, DBMS, Data Structures, Statistics, IoT, Computer Networks.</p>
+          </div>
+        </div>
+        <div class="edu-card reveal" data-delay="100">
+          <div class="edu-icon">📚</div>
+          <div class="edu-body">
+            <h3>Higher Secondary (12th — PCM + CS)</h3>
+            <p class="edu-meta">State Board · <span class="accent-text">2021 — 2023</span></p>
+            <p class="edu-note">Built a strong foundation in mathematics and programming fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </header>
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <p class="section-eyebrow">Skills</p>
+      <h2 class="section-title">Tools &amp; technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal" data-level="90">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">🐍</span><span class="skill-name">Python</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="80">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">🔧</span><span class="skill-name">C</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="75">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">☕</span><span class="skill-name">Java</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="85">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">🧠</span><span class="skill-name">Machine Learning</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="82">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">📊</span><span class="skill-name">Data Science</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="78">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">🔌</span><span class="skill-name">IoT</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="80">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">🌐</span><span class="skill-name">Web Development</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill-card reveal" data-level="88">
+          <div class="skill-top">
+            <div class="skill-left"><span class="skill-icon">⚙️</span><span class="skill-name">Problem Solving</span></div>
+            <span class="skill-level">0%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- HERO -->
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-eyebrow">Projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="projects-grid">
 
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <img src="images/profile.jpg"
-                alt="Profile"
-                class="profile-img">
-
-            <h1>
-                Hi, I'm
-                <span>Vignnesh</span>
-            </h1>
-
-            <h2 id="typing-text"></h2>
-
-            <p>
-                AI & Data Science Engineering Student passionate about
-                Artificial Intelligence, Machine Learning,
-                Data Analytics and IoT Solutions.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn">
-                    View Projects
-                </a>
-
-                <a href="resume.pdf"
-                    download
-                    class="btn btn-outline">
-                    Download Resume
-                </a>
-
+        <article class="project-card reveal">
+          <div class="project-img placeholder-crashsense">
+            <div class="project-img-overlay">
+              <span class="project-img-label">Crashsense</span>
             </div>
-
-            <div class="social-icons">
-
-                <a href="https://github.com/yourusername">
-                    GitHub
-                </a>
-
-                <a href="https://linkedin.com/in/yourusername">
-                    LinkedIn
-                </a>
-
-                <a href="mailto:yourmail@gmail.com">
-                    Email
-                </a>
-
+          </div>
+          <div class="project-body">
+            <h3><a href="#" target="_blank" rel="noreferrer">Crashsense ↗</a></h3>
+            <p>AI-powered vehicle crash detection system that uses sensor data and machine learning to detect collisions in real time and trigger emergency alerts.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Machine Learning</span><span>IoT</span><span>Sensors</span>
             </div>
+          </div>
+        </article>
 
-        </div>
-
-    </section>
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <h2>About Me</h2>
-
-            <div class="about-card">
-
-                <p>
-                    I am a 19-year-old Artificial Intelligence
-                    and Data Science student passionate about
-                    developing innovative AI applications,
-                    machine learning models and IoT systems.
-                </p>
-
-                <p>
-                    My goal is to become a Software Engineer
-                    specializing in AI-driven solutions.
-                </p>
-
+        <article class="project-card reveal" data-delay="100">
+          <div class="project-img placeholder-garage">
+            <div class="project-img-overlay">
+              <span class="project-img-label">Smart Garage</span>
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- EDUCATION -->
-
-    <section id="education">
-
-        <div class="container">
-
-            <h2>Education</h2>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-
-                    <h3>
-                        B.E Artificial Intelligence &
-                        Data Science
-                    </h3>
-
-                    <span>2023 - 2027</span>
-
-                    <p>
-                        Engineering Student pursuing
-                        Artificial Intelligence &
-                        Data Science.
-                    </p>
-
-                </div>
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Higher Secondary Education
-                    </h3>
-
-                    <span>2021 - 2023</span>
-
-                    <p>
-                        Completed PCM and Computer Science.
-                    </p>
-
-                </div>
-
+          </div>
+          <div class="project-body">
+            <h3><a href="#" target="_blank" rel="noreferrer">Smart Garage (RFID) ↗</a></h3>
+            <p>Automated garage access system using RFID technology with microcontroller integration. Authenticates registered users and logs entry events securely.</p>
+            <div class="project-tags">
+              <span>Arduino</span><span>RFID</span><span>C++</span><span>IoT</span>
             </div>
+          </div>
+        </article>
 
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <h2>Skills</h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    Python
-                </div>
-
-                <div class="skill-card">
-                    C Programming
-                </div>
-
-                <div class="skill-card">
-                    Java
-                </div>
-
-                <div class="skill-card">
-                    HTML
-                </div>
-
-                <div class="skill-card">
-                    CSS
-                </div>
-
-                <div class="skill-card">
-                    JavaScript
-                </div>
-
-                <div class="skill-card">
-                    Machine Learning
-                </div>
-
-                <div class="skill-card">
-                    Data Science
-                </div>
-
-                <div class="skill-card">
-                    Arduino
-                </div>
-
-                <div class="skill-card">
-                    IoT
-                </div>
-
+        <article class="project-card reveal" data-delay="200">
+          <div class="project-img" style="background: linear-gradient(135deg, #06b6d4 0%, #3b72ff 100%);">
+            <div class="project-img-overlay">
+              <span class="project-img-label">Portfolio</span>
             </div>
-
-        </div>
-
-    </section>
-        <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <h2>Projects</h2>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-
-                    <img src="images/crashsense.jpg"
-                        alt="Crashsense">
-
-                    <h3>Crashsense</h3>
-
-                    <p>
-                        AI-powered vehicle crash detection system
-                        using machine learning and sensors.
-                    </p>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="images/smart-garage.jpg"
-                        alt="Smart Garage">
-
-                    <h3>Smart Garage RFID</h3>
-
-                    <p>
-                        Automated garage access control system
-                        using RFID and Arduino.
-                    </p>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="images/object-detection.jpg"
-                        alt="Object Detection">
-
-                    <h3>Object Detection System</h3>
-
-                    <p>
-                        AI system for recognizing vehicle parts
-                        using computer vision.
-                    </p>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="images/graphics-editor.jpg"
-                        alt="Graphics Editor">
-
-                    <h3>2D Graphics Editor</h3>
-
-                    <p>
-                        Menu-driven graphics editor in C for
-                        drawing shapes and object manipulation.
-                    </p>
-
-                </div>
-
-                <div class="project-card">
-
-                    <img src="images/portfolio.jpg"
-                        alt="Portfolio">
-
-                    <h3>Portfolio Website</h3>
-
-                    <p>
-                        Modern responsive portfolio website
-                        built using HTML, CSS and JavaScript.
-                    </p>
-
-                </div>
-
+          </div>
+          <div class="project-body">
+            <h3><a href="#" target="_blank" rel="noreferrer">This Portfolio ↗</a></h3>
+            <p>Responsive personal portfolio with dark mode, typing animation, smooth reveal on scroll, and a printable resume — built with vanilla HTML, CSS &amp; JS.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span>
             </div>
+          </div>
+        </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <p class="section-eyebrow">Certifications</p>
+      <h2 class="section-title">Learning &amp; recognition</h2>
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap">🏆</div>
+          <div>
+            <h3>Machine Learning Fundamentals</h3>
+            <p>Coursera · 2024</p>
+          </div>
         </div>
+        <div class="cert-card reveal" data-delay="80">
+          <div class="cert-icon-wrap">🏆</div>
+          <div>
+            <h3>Python for Data Science</h3>
+            <p>NPTEL · 2024</p>
+          </div>
+        </div>
+        <div class="cert-card reveal" data-delay="160">
+          <div class="cert-icon-wrap">🏆</div>
+          <div>
+            <h3>Introduction to IoT</h3>
+            <p>Cisco Networking Academy · 2023</p>
+          </div>
+        </div>
+        <div class="cert-card reveal" data-delay="240">
+          <div class="cert-icon-wrap">🏆</div>
+          <div>
+            <h3>Web Development Bootcamp</h3>
+            <p>Udemy · 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Let's build something together</h2>
+      <div class="contact-box reveal">
+        <div class="contact-glow"></div>
+        <p>Open to internships, freelance projects, and collaborations on AI, Data Science, or IoT problems. Reach out — I usually respond within a day.</p>
+        <div class="contact-buttons">
+          <a href="mailto:vignnesh@example.com" class="btn btn-primary">✉️ Email Me</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" class="btn btn-outline">💼 LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer" class="btn btn-outline">🐙 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- ACHIEVEMENTS -->
+  <!-- ===================== RESUME ===================== -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <p class="section-eyebrow">Resume</p>
+      <h2 class="section-title">Vignnesh — Resume</h2>
+      <div class="no-print resume-actions">
+        <button class="btn btn-primary" data-modal="resume">📄 Download Resume</button>
+        <button class="btn btn-outline" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      </div>
 
-    <section id="achievements">
+      <div class="resume-page" id="resume-page">
+        <header class="resume-header">
+          <h1>Vignnesh</h1>
+          <p class="resume-sub">B.E. Artificial Intelligence &amp; Data Science Student</p>
+          <div class="resume-contacts">
+            <span>✉️ <a href="mailto:vignnesh@example.com">vignnesh@example.com</a></span>
+            <span>📱 +91 98765 43210</span>
+            <span>📍 Tamil Nadu, India</span>
+            <span>🐙 <a href="https://github.com/vignnesh" target="_blank" rel="noreferrer">github.com/vignnesh</a></span>
+            <span>💼 <a href="https://linkedin.com/in/vignnesh" target="_blank" rel="noreferrer">linkedin.com/in/vignnesh</a></span>
+          </div>
+        </header>
 
-        <div class="container">
+        <section class="resume-block">
+          <h2>Summary</h2>
+          <p>Motivated AI &amp; Data Science engineering student with hands-on experience in machine learning, IoT systems, and web development. Built real-world projects including an AI-powered crash detection system and an RFID-based smart garage. Quick learner, team player, and eager to contribute to innovative tech teams through internships and collaborative projects.</p>
+        </section>
 
-            <h2>Achievements</h2>
-
-            <div class="achievement-grid">
-
-                <div class="achievement-card">
-
-                    <h3>🏆 AI Projects</h3>
-
-                    <p>
-                        Developed multiple AI and IoT projects
-                        during engineering studies.
-                    </p>
-
-                </div>
-
-                <div class="achievement-card">
-
-                    <h3>📜 Certifications</h3>
-
-                    <p>
-                        Completed certifications in
-                        Machine Learning and Python.
-                    </p>
-
-                </div>
-
-                <div class="achievement-card">
-
-                    <h3>💻 Web Development</h3>
-
-                    <p>
-                        Built responsive and professional
-                        websites from scratch.
-                    </p>
-
-                </div>
-
-                <div class="achievement-card">
-
-                    <h3>🚀 Problem Solving</h3>
-
-                    <p>
-                        Strong analytical and coding skills
-                        through project-based learning.
-                    </p>
-
-                </div>
-
+        <section class="resume-block">
+          <h2>Education</h2>
+          <div class="resume-item">
+            <div class="resume-row">
+              <strong>B.E. — Artificial Intelligence &amp; Data Science</strong>
+              <span>2023 — 2027 (Expected)</span>
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- CERTIFICATIONS -->
-
-    <section id="certifications">
-
-        <div class="container">
-
-            <h2>Certifications</h2>
-
-            <div class="cert-grid">
-
-                <div class="cert-card">
-                    <img src="images/certificate1.jpg">
-                    <h3>Machine Learning Fundamentals</h3>
-                </div>
-
-                <div class="cert-card">
-                    <img src="images/certificate2.jpg">
-                    <h3>Python for Data Science</h3>
-                </div>
-
-                <div class="cert-card">
-                    <img src="images/certificate3.jpg">
-                    <h3>Introduction to IoT</h3>
-                </div>
-
+            <p>Engineering College, Tamil Nadu</p>
+            <p class="resume-small">Relevant coursework: Machine Learning, Deep Learning, Data Structures, DBMS, Statistics, IoT, Computer Networks.</p>
+          </div>
+          <div class="resume-item">
+            <div class="resume-row">
+              <strong>Higher Secondary (12th — PCM + CS)</strong>
+              <span>2021 — 2023</span>
             </div>
+            <p>State Board School</p>
+          </div>
+        </section>
 
-        </div>
+        <section class="resume-block">
+          <h2>Technical Skills</h2>
+          <div class="resume-skills-grid">
+            <div><strong>Languages:</strong> Python, C, Java, JavaScript, SQL</div>
+            <div><strong>ML / AI:</strong> Scikit-learn, Pandas, NumPy, TensorFlow (basics)</div>
+            <div><strong>Web:</strong> HTML, CSS, React, Node.js</div>
+            <div><strong>Tools:</strong> Git, GitHub, VS Code, Arduino IDE</div>
+            <div><strong>IoT / Embedded:</strong> Arduino, Raspberry Pi, RFID, Sensors</div>
+            <div><strong>Databases:</strong> MySQL, MongoDB (basics)</div>
+          </div>
+        </section>
 
-    </section>
-        <!-- CONTACT -->
+        <section class="resume-block">
+          <h2>Projects</h2>
+          <div class="resume-item">
+            <strong>Crashsense — AI Crash Detection System</strong>
+            <ul>
+              <li>Built a real-time vehicle crash detection system using sensor data and ML algorithms.</li>
+              <li>Implemented data preprocessing, feature extraction, and anomaly detection pipelines.</li>
+              <li>Integrated emergency alert notification logic for rapid response scenarios.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <strong>Smart Garage — RFID Access System</strong>
+            <ul>
+              <li>Designed an automated garage entry system using RFID modules and Arduino.</li>
+              <li>Created a secure authentication flow with registered user validation and entry logging.</li>
+              <li>Built a dashboard to monitor and log all access events in real time.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <strong>Personal Portfolio Website</strong>
+            <ul>
+              <li>Designed and developed a responsive portfolio using HTML, CSS, and JavaScript.</li>
+              <li>Features dynamic typing animations, dark mode, scroll progress, and smooth reveal animations.</li>
+            </ul>
+          </div>
+        </section>
 
-    <section id="contact">
+        <section class="resume-block">
+          <h2>Certifications</h2>
+          <ul>
+            <li>Machine Learning Fundamentals — Coursera (2024)</li>
+            <li>Python for Data Science — NPTEL (2024)</li>
+            <li>Introduction to IoT — Cisco Networking Academy (2023)</li>
+            <li>Web Development Bootcamp — Udemy (2023)</li>
+          </ul>
+        </section>
 
-        <div class="container">
+        <section class="resume-block">
+          <h2>Extracurricular &amp; Interests</h2>
+          <ul>
+            <li>Active participant in college hackathons and coding competitions.</li>
+            <li>Member of the AI &amp; IoT student community — conducts peer learning sessions.</li>
+            <li>Interests: Open-source contributions, tech blogging, and competitive programming.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
 
-            <h2>Contact Me</h2>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Vignnesh. Built with ♥ and curiosity.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">🐙</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">💼</a>
+        <a href="mailto:vignnesh@example.com" aria-label="Email">✉️</a>
+      </div>
+    </div>
+  </footer>
 
-            <form class="contact-form">
+  <!-- ===================== RESUME MODAL ===================== -->
+  <!--
+    Replace "Vignnesh_Resume.pdf" with your actual PDF file path.
+    Place the PDF in the same folder as index.html.
+    For Google Drive: use https://drive.google.com/uc?export=download&id=YOUR_FILE_ID
+  -->
+  <div id="resume-modal-overlay" class="resume-modal-overlay" role="dialog" aria-modal="true" aria-label="Resume options">
+    <div class="resume-modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <p class="modal-title">📄 Get My Resume</p>
+      <p class="modal-sub">Choose how you'd like to access my resume:</p>
+      <div class="modal-options">
 
-                <input type="text"
-                    placeholder="Your Name"
-                    required>
+        <a href="#resume" class="modal-option"
+           onclick="document.getElementById('resume-modal-overlay').classList.remove('open'); document.body.style.overflow='';">
+          <span class="modal-option-icon">👁️</span>
+          <div class="modal-option-text">
+            <strong>View on this page</strong>
+            <span>Scroll to the full resume section below</span>
+          </div>
+          <span class="modal-option-arrow">→</span>
+        </a>
 
-                <input type="email"
-                    placeholder="Your Email"
-                    required>
+        <a href="Vignnesh_Resume.pdf" download="Vignnesh_Resume.pdf" class="modal-option">
+          <span class="modal-option-icon">⬇️</span>
+          <div class="modal-option-text">
+            <strong>Download PDF</strong>
+            <span>Save Vignnesh_Resume.pdf to your device</span>
+          </div>
+          <span class="modal-option-arrow">→</span>
+        </a>
 
-                <textarea
-                    placeholder="Your Message"
-                    rows="6"
-                    required></textarea>
+        <a href="Vignnesh_Resume.pdf" target="_blank" rel="noreferrer" class="modal-option">
+          <span class="modal-option-icon">🔗</span>
+          <div class="modal-option-text">
+            <strong>Open in new tab</strong>
+            <span>View the PDF directly in your browser</span>
+          </div>
+          <span class="modal-option-arrow">→</span>
+        </a>
 
-                <button type="submit"
-                    class="btn">
-                    Send Message
-                </button>
+        <a href="#" class="modal-option"
+           onclick="event.preventDefault(); document.getElementById('resume-modal-overlay').classList.remove('open'); document.body.style.overflow=''; setTimeout(() => window.print(), 300);">
+          <span class="modal-option-icon">🖨️</span>
+          <div class="modal-option-text">
+            <strong>Print / Save as PDF</strong>
+            <span>Use your browser's print dialog</span>
+          </div>
+          <span class="modal-option-arrow">→</span>
+        </a>
 
-            </form>
+      </div>
+    </div>
+  </div>
 
-        </div>
-
-    </section>
-
-    <!-- COUNTERS -->
-
-    <section class="counter-section">
-
-        <div class="counter-box">
-
-            <h3 class="counter"
-                data-target="5">0</h3>
-
-            <p>Projects</p>
-
-        </div>
-
-        <div class="counter-box">
-
-            <h3 class="counter"
-                data-target="10">0</h3>
-
-            <p>Skills</p>
-
-        </div>
-
-        <div class="counter-box">
-
-            <h3 class="counter"
-                data-target="3">0</h3>
-
-            <p>Certifications</p>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <h3>Vignnesh</h3>
-
-        <p>
-            Artificial Intelligence &
-            Data Science Engineer
-        </p>
-
-        <div class="footer-social">
-
-            <a href="https://github.com/yourusername">
-                GitHub
-            </a>
-
-            <a href="https://linkedin.com/in/yourusername">
-                LinkedIn
-            </a>
-
-            <a href="mailto:yourmail@gmail.com">
-                Email
-            </a>
-
-        </div>
-
-        <p class="copyright">
-            © 2026 Vignnesh. All Rights Reserved.
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
